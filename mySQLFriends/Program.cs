@@ -26,7 +26,7 @@ public class Program
         Console.Write("SURNAME: ");
         string surname = Console.ReadLine().ToUpper();
 
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 20; i++)
         {
             try
             {
@@ -54,7 +54,7 @@ public class Program
             Console.WriteLine();
         }
 
-
+        Console.WriteLine("==OUTPUT==\n");
         Console.WriteLine($"CREATE DATABASE INFOMNGT_PRELIMS_TP03_{surname};");
         Console.WriteLine($"USE INFOMNGT_PRELIMS_TP03_{surname};");
         Console.WriteLine($"CREATE TABLE MY_FB_FRIENDS_{surname}(fb_friend_number INT PRIMARY KEY, " +
@@ -68,5 +68,7 @@ public class Program
             Console.WriteLine($"INSERT INTO MY_FB_FRIENDS_{surname} " +
                               $"VALUES({i + 1}, '{friends[i].name}', '{friends[i].bd}', {friends[i].age}, '{friends[i].nn}');");
         }
+        Console.Write("\nPRESS ANY KEY TO EXIT");
+        Console.ReadKey();
     }
 }
